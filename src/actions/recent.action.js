@@ -1,7 +1,6 @@
 'use strict';
 
 var superagent = require('superagent');
-var dispatcher = require('../contrib/dispatcher');
 var constants = require('../constants/event_constant');
 
 /**

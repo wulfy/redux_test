@@ -10,7 +10,7 @@ var eventEmitter = require('../contrib/event-emitter');
 **/
 module.exports = {
 
-  //lorsque le composant a été chargé, on bin onChange au listener de l'emitter pour etre notifié des MAJ du store
+  //lorsque le composant a été chargé, on bind onChange au listener de l'emitter pour etre notifié des MAJ du store
   //  addListener(eventType, listener, context)
   // emit(eventType, a, b, c, d, e, _) { ..... listener(a, b, c, d, e);...}
   //cf https://github.com/facebook/emitter/blob/master/src/EventEmitter.js 

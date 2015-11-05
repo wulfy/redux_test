@@ -13,8 +13,9 @@ var ReduxuxMixin = require('../mixins/redux-mixin');
 
 module.exports = React.createClass({
 
-  mixins: [ReduxuxMixin],
-  stores: [PhotoStore],
+  mixins: [ReduxuxMixin], //React est basé sur une archi "composant" , 
+  //mixins permet d'utiliser des fonctions qui peuvent être utilisées pour plusieurs composants. leur ordre suit l'ordre de déclaration
+  
 
   componentWillMount: function () {
     this.props.store.dispatch(recentAction());
