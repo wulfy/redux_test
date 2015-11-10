@@ -31,6 +31,11 @@ module.exports = React.createClass({
     this.setState({photos: photos});
   },
 
+  refresh: function () {
+    console.log('[COMPONENT] refreshing');
+    this.props.store.dispatch(recentAction());
+  },
+
   render: function() {
   console.log("rendering list "+this.state.photos.length);
     var photos = this.state.photos.map(function(photo) {
@@ -40,7 +45,8 @@ module.exports = React.createClass({
     });
 
     return (
-       <div> {this.state.photos.length + ""}  Photos  
+       <div> {this.state.photos.length + ""}  Photos 
+       <button onClick={this.refresh}>refresh</button> 
       <ul>
         {photos}
       </ul></div>
